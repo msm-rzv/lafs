@@ -1,0 +1,227 @@
+/* Center navigation bar */
+nav {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 50px; /* Space between images */
+
+    padding: 15px 0;
+}
+
+/* Style images in navigation bar */
+nav a img {
+    width: 60px; /* Default size for all images */
+    height: auto;
+    transition: transform 0.3s ease-in-out;
+}
+
+/* Make the Writers image slightly bigger */
+nav a:first-child img {
+    width: 80px; /* Slightly larger size */
+}
+
+/* Lower the Poetry image slightly */
+nav a:last-child img {
+    transform: translateY(8px); /* Moves it 8px lower */
+}
+
+/* Hover Effect */
+nav a img:hover {
+    transform: scale(1.1); /* Slight zoom on hover */
+}
+body {
+    margin: 0;
+    padding: 0;
+    background-color:white;
+    display: block; /* Remove flex properties */
+
+}
+/* Transparent background */
+#poet-carousel {
+    width: 100%;
+    overflow: hidden;
+    background-color: transparent; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    margin-top: 50px; /* Adjust this value as needed */
+}
+
+/* Make the carousel track full width and overflow properly */
+.carousel-container {
+    width: 100%;
+    display: flex;
+    overflow: hidden;
+    position: relative;
+}
+
+/* Ensure images stretch across screen */
+.carousel-track {
+    display: flex;
+    gap: 10px; /* Reduce gap so images are closer together */
+    animation: infinite-scroll 20s linear infinite; /* Continuous scrolling */
+    width: max-content;
+}
+
+/* Image styling */
+.carousel-item {
+    flex: 0 0 auto;
+    text-align: left; /* Align text to left */
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.carousel-item img {
+    width: 188px;  /* Set width */
+    height: 282px; /* Set height */
+    object-fit: cover;
+    border-radius: 10px;
+    transition: transform 0.3s ease-in-out;
+}
+
+
+#poet-carousel::before {
+    left: 0;
+    background: linear-gradient(to right, rgba(255, 255, 255, 1), rgba(255, 255, 255, 0));
+}
+
+#poet-carousel::after {
+    right: 0;
+    background: linear-gradient(to left, rgba(255, 255, 255, 1), rgba(255, 255, 255, 0));
+}
+
+/* Font styling */
+body {
+    font-family: 'Lustria', serif;
+}
+.carousel-item p {
+    margin-top: 5px;
+    font-family: 'Lustria', serif;
+    font-size: 16px;
+    font-weight: normal;
+    color: black;
+    text-decoration: none;
+}
+
+.carousel-item a {
+    text-decoration: none; /* Ensures links are not underlined */
+    color: inherit; /* Keeps text color consistent */
+}
+.carousel-container:hover .carousel-track {
+    animation-play-state: paused; /* Stops the scrolling when hovered */
+}
+
+/* Infinite scrolling animation */
+@keyframes infinite-scroll {
+    from { transform: translateX(0); }
+    to { transform: translateX(-50%); } /* Moves left infinitely */
+}
+
+
+.container{
+    display: flex;
+    margin-top: 15vh;
+    height: 100vh;
+}
+.text-section {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+   
+    font-family: 'Lustria', serif;
+    font-size: 18px;
+    letter-spacing: 0.07em;
+    line-height: 65px;
+    opacity: 0.70;
+    text-align: center;
+    font-weight: lighter;
+   
+}
+.image-section{
+    flex: 1;
+    background:url(/LafsImages/MainPagePoet.jpg) no-repeat center center;
+    background-size: cover;
+    background-position:center 20%
+}
+.containerbottom{
+    display: flex;  
+    height: 100vh;
+}
+.text-sectionbottom{
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    
+    font-family: 'Lustria', serif;
+    font-size: 18px;
+    letter-spacing: 0.07em;
+    line-height: 65px;
+    opacity: 0.70;
+    text-align: center;
+    font-weight: lighter;
+   
+}
+
+.text-section img{
+    width: 70px;  /* Adjust this value as needed */
+    height: auto;  /* Maintains aspect ratio */
+    display: block; /* Ensures proper alignment */
+    margin-top: 10px; /* Add some spacing */
+
+}
+.text-sectionbottom img {
+    width: 55px;  /* Adjust this value as needed */
+    height: auto;  /* Maintains aspect ratio */
+    display: block; /* Ensures proper alignment */
+    margin-top: 10px; /* Add some spacing */
+ 
+
+}
+.text-section img:hover, 
+.text-sectionbottom img:hover {
+    transform: scale(1.1); /* Scales the image on hover */
+    transition: transform 0.3s ease; /* Smooth transition */
+}
+
+.image-sectionbottom{
+    flex: 1;
+    background:url(/LafsImages/filler1.jpg) no-repeat center center;
+    background-size: cover;
+    background-position:center 20%
+}
+
+footer {
+    background-color: #fff; /* White background */
+    text-align: center;
+    padding: 20px 0;
+}
+
+.footer-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.footer-logo img {
+    margin-top: 15px;
+    width: 100px; /* Increased logo size */
+    margin-bottom: 15px;
+}
+
+
+.copyright {
+    font-size: 14px;
+    font-family: 'EB Garamond', serif;
+    color: rgba(0, 0, 0, 0.7); /* Light gray */
+}
+
+
+
+
+

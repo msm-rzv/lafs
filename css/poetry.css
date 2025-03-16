@@ -1,0 +1,94 @@
+
+/* Center navigation bar */
+nav {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 50px; /* Space between images */
+
+    padding: 15px 0;
+}
+
+/* Style images in navigation bar */
+nav a img {
+    width: 60px; /* Default size for all images */
+    height: auto;
+    transition: transform 0.3s ease-in-out;
+}
+
+/* Make the Writers image slightly bigger */
+nav a:first-child img {
+    width: 80px; /* Slightly larger size */
+}
+
+/* Lower the Poetry image slightly */
+nav a:last-child img {
+    transform: translateY(8px); /* Moves it 8px lower */
+}
+
+/* Hover Effect */
+nav a img:hover {
+    transform: scale(1.1); /* Slight zoom on hover */
+}
+body {
+    font-family: 'Lustria', serif;
+}
+
+#poetry-categories {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 100px; /* Increased space between images */
+    padding: 150px 0; /* More space at the top and bottom */
+}
+
+.category {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-decoration: none;
+    color: black;
+    transition: transform 0.3s ease-in-out;
+}
+
+.category img {
+    width: 120px; /* Slightly wider */
+    height: 700px; /* Longer images */
+    object-fit: cover;
+    margin-bottom: 20px;
+    transition: transform 0.3s ease-in-out;
+}
+
+.category:hover img {
+    transform: scale(1.05);
+}
+
+.category span {
+    margin-top: 15px;
+    font-size: 16px;
+}
+
+footer {
+    background-color: #fff; /* White background */
+    text-align: center;
+    padding: 20px 0;
+}
+
+.footer-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.footer-logo img {
+    margin-top: 15px;
+    width: 100px; /* Increased logo size */
+    margin-bottom: 15px;
+}
+
+
+.copyright {
+    font-size: 14px;
+    font-family: 'EB Garamond', serif;
+    color: rgba(0, 0, 0, 0.7); /* Light gray */
+}
