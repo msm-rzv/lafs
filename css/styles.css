@@ -220,6 +220,11 @@ footer {
     font-family: 'EB Garamond', serif;
     color: rgba(0, 0, 0, 0.7); /* Light gray */
 }
+.credit {
+    font-size: 10px;
+    font-family: 'EB Garamond', serif;
+    color: rgba(0, 0, 0, 0.7); /* Light gray */
+}
 
 
 
