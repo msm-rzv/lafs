@@ -3,94 +3,171 @@ nav {
     display: flex;
     justify-content: center;
     align-items: center;
-    gap: 50px; /* Space between images */
-
+    gap: 50px;
     padding: 15px 0;
 }
 
+
 /* Style images in navigation bar */
 nav a img {
-    width: 60px; /* Default size for all images */
+    width: 60px;
     height: auto;
     transition: transform 0.3s ease-in-out;
 }
 
+
 /* Make the Writers image slightly bigger */
 nav a:first-child img {
-    width: 80px; /* Slightly larger size */
+    width: 80px;
 }
+
 
 /* Lower the Poetry image slightly */
 nav a:last-child img {
-    transform: translateY(8px); /* Moves it 8px lower */
+    transform: translateY(8px);
 }
+
 
 /* Hover Effect */
 nav a img:hover {
-    transform: scale(1.1); /* Slight zoom on hover */
+    transform: scale(1.1);
 }
+
+
+/* General Styles */
 body {
     margin: 0;
     padding: 0;
-    background-color:white;
-    display: block; /* Remove flex properties */
-
-}
-body {
+    background-color: white;
     font-family: 'Lustria', serif;
 }
-.container{
+
+
+/* Top Container: Split equally */
+/* Top Container: Split equally */
+.container {
+    margin-top: 3vh;
     display: flex;
-    margin-top: 15vh;
     height: 100vh;
 }
+
+
+/* Image Section (Top Left) */
+
+.image-section {
+    width: 50%; /* Image covers half the screen */
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.image-section img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center left; /* Adjusts the image slightly to the left */
+}
+
+
+/* Text Section (Top Right) */
 .text-section {
     flex: 1;
     display: flex;
-    flex-direction: column;
     justify-content: center;
     align-items: center;
-   
-    font-family: 'Lustria', serif;
     font-size: 18px;
     letter-spacing: 0.07em;
-    line-height: 65px;
+    line-height: 2.5;
     opacity: 0.70;
     text-align: center;
     font-weight: lighter;
-   
+    padding: 2vw;
 }
-.image-section{
+
+
+/* Poet Name */
+.poet-name {
+    font-family: 'Lustria', serif;
+    color: rgba(0, 0, 0, 0.7);
+    text-align: center;
+    font-size: 32px;
+    padding: 5vh;
+}
+
+
+/* Bottom Container */
+.containerbottom {
+    display: flex;
+    height: 100vh; /* Set this to limit the height of the bottom section */
+    justify-content: space-between;
+    align-items: flex-start; /* Align items to the top */
+}
+
+/* Bottom Left Text Section */
+.text-sectionbottom {
+    margin-top: 6vh;
     flex: 1;
-    background:url(/LafsImages/jaunEliyaPage.jpg) no-repeat center center;
-    background-size: cover;
-    background-position:center 20%
-}
-.containerbottom{
-    display: flex;  
-    height: 100vh;
-}
-.text-sectionbottom{
-    flex: 1;
+    padding-left: 5vw;
+    padding-right: 2vw;
     display: flex;
     flex-direction: column;
     justify-content: center;
-    align-items: center;
-    
     font-family: 'Lustria', serif;
     font-size: 18px;
     letter-spacing: 0.07em;
-    line-height: 65px;
+    line-height: 2.5;
     opacity: 0.70;
-    text-align: center;
+    text-align: left;
     font-weight: lighter;
-   
 }
 
-.text-section img{
-    width: 70px;  /* Adjust this value as needed */
-    height: auto;  /* Maintains aspect ratio */
-    display: block; /* Ensures proper alignment */
-    margin-top: 10px; /* Add some spacing */
 
+/* Lined Paper Effect */
+.text-sectionbottom p {
+    padding-bottom: 10px;
+    border-bottom: 1px solid #ccc;
+    width: 50%; /* Limit the width of the lines to half the page */
 }
+
+
+/* Bottom Right Image as Bookmark */
+.image-sectionbottom img {
+    margin-top: 5vh;
+    width: 14vh;
+    height: 90vh;
+    object-fit: cover;
+    object-position: center;
+    margin-right: 20vh;
+}
+
+
+/* Footer Styles */
+footer {
+    margin-top: 0vh;
+    background-color: #fff;
+    text-align: center;
+    padding: 20px 0;
+}
+
+
+.footer-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+
+.footer-logo img {
+    margin-top: 15px;
+    width: 100px;
+    margin-bottom: 15px;
+}
+
+
+.copyright {
+    font-size: 14px;
+    font-family: 'EB Garamond', serif;
+    color: rgba(0, 0, 0, 0.7);
+} 

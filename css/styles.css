@@ -119,7 +119,6 @@ body {
     to { transform: translateX(-50%); } /* Moves left infinitely */
 }
 
-
 .container{
     display: flex;
     margin-top: 15vh;
@@ -213,6 +212,16 @@ footer {
     width: 100px; /* Increased logo size */
     margin-bottom: 15px;
 }
+.footer-container p{
+    font-size: 14px;
+    font-family: 'EB Garamond', serif;
+    color: rgba(0, 0, 0, 0.7); /* Light gray */
+
+}
+.footer-container a{
+    text-decoration: none;
+    color: rgba(187, 154, 132, 0.7);
+}
 
 
 .copyright {
@@ -220,13 +229,6 @@ footer {
     font-family: 'EB Garamond', serif;
     color: rgba(0, 0, 0, 0.7); /* Light gray */
 }
-.credit {
-    font-size: 10px;
-    font-family: 'EB Garamond', serif;
-    color: rgba(0, 0, 0, 0.7); /* Light gray */
-}
-
-
 
 
 
