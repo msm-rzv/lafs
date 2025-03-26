@@ -122,6 +122,16 @@ body {
     text-align: left;
     font-weight: lighter;
 }
+.text-sectionbottom a {
+    color: inherit;          /* Inherits the text color from the parent */
+    text-decoration: none;   /* Removes underline */
+         /* Optional: Makes the text bold */
+}
+
+.text-sectionbottom a:hover {
+    color: #b38b59;          /* Optional: Changes color on hover (custom shade) */
+    /* Optional: Adds underline on hover */
+}
 
 
 /* Lined Paper Effect */

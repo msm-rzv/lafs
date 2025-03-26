@@ -1,0 +1,102 @@
+/* Center navigation bar */
+nav {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 50px;
+    padding: 15px 0;
+}
+
+
+/* Style images in navigation bar */
+nav a img {
+    width: 60px;
+    height: auto;
+    transition: transform 0.3s ease-in-out;
+}
+
+
+/* Make the Writers image slightly bigger */
+nav a:first-child img {
+    width: 80px;
+}
+
+
+/* Lower the Poetry image slightly */
+nav a:last-child img {
+    transform: translateY(8px);
+}
+
+
+/* Hover Effect */
+nav a img:hover {
+    transform: scale(1.1);
+}
+
+
+/* General Styles */
+body {
+    margin: 0;
+    padding: 0;
+    background-color: white;
+    font-family: 'Lustria', serif;
+}
+
+.poem-title{
+    font-family: 'Lustria', serif;
+    color: rgba(0, 0, 0, 0.7);
+    text-align: center;
+    font-size: 32px;
+    padding: 5vh;
+
+}
+
+
+/* Style for the poem */
+.thepoem {
+    font-family: 'EB Garamond', serif;
+    font-size: 20px; /* Increase font size */
+    line-height: 2; /* Double spacing */
+    text-align: center; /* Center the text */
+    margin: 20px auto;
+    max-width: 70%; /* Keep it readable */
+}
+
+/* Style for the poet's name */
+.poet-name {
+    font-family: 'EB Garamond', serif;
+    font-size: 20px;
+    text-align: center;
+    color: #b38b59; 
+    margin-top: 40px;
+}
+
+
+/* Footer Styles */
+footer {
+    margin-top: 0vh;
+    background-color: #fff;
+    text-align: center;
+    padding: 20px 0;
+}
+
+
+.footer-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+
+.footer-logo img {
+    margin-top: 15px;
+    width: 100px;
+    margin-bottom: 15px;
+}
+
+
+.copyright {
+    font-size: 14px;
+    font-family: 'EB Garamond', serif;
+    color: rgba(0, 0, 0, 0.7);
+} 
