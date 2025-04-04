@@ -1,0 +1,183 @@
+/* Center navigation bar */
+nav {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 50px;
+    padding: 15px 0;
+}
+
+
+/* Style images in navigation bar */
+nav a img {
+    width: 60px;
+    height: auto;
+    transition: transform 0.3s ease-in-out;
+}
+
+
+/* Make the Writers image slightly bigger */
+nav a:first-child img {
+    width: 80px;
+}
+
+
+/* Lower the Poetry image slightly */
+nav a:last-child img {
+    transform: translateY(8px);
+}
+
+
+/* Hover Effect */
+nav a img:hover {
+    transform: scale(1.1);
+}
+
+
+/* General Styles */
+body {
+    margin: 0;
+    padding: 0;
+    background-color: white;
+    font-family: 'Lustria', serif;
+}
+
+
+/* Top Container: Split equally */
+/* Top Container: Split equally */
+.container {
+    margin-top: 3vh;
+    display: flex;
+    height: 100vh;
+}
+
+
+/* Image Section (Top Left) */
+
+.image-section {
+    width: 50%; /* Image covers half the screen */
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.image-section img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center left; /* Adjusts the image slightly to the left */
+}
+
+
+/* Text Section (Top Right) */
+.text-section {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 18px;
+    letter-spacing: 0.07em;
+    line-height: 2.5;
+    opacity: 0.70;
+    text-align: center;
+    font-weight: lighter;
+    padding: 2vw;
+}
+
+
+/* Poet Name */
+.poet-name {
+    font-family: 'Lustria', serif;
+    color: rgba(0, 0, 0, 0.7);
+    text-align: center;
+    font-size: 32px;
+    padding: 5vh;
+}
+
+
+/* Bottom Container */
+.containerbottom {
+    display: flex;
+    height: 150vh; /* Set this to limit the height of the bottom section */
+    justify-content: space-between;
+    align-items: flex-start; /* Align items to the top */
+}
+
+/* Bottom Left Text Section */
+.text-sectionbottom {
+    margin-top: 6vh;
+    flex: 1;
+    padding-left: 5vw;
+    padding-right: 2vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    font-family: 'Lustria', serif;
+    font-size: 18px;
+    letter-spacing: 0.07em;
+    line-height: 2.5;
+    opacity: 0.70;
+    text-align: left;
+    font-weight: lighter;
+}
+.text-sectionbottom a {
+    color: inherit;          /* Inherits the text color from the parent */
+    text-decoration: none;   /* Removes underline */
+         /* Optional: Makes the text bold */
+}
+
+.text-sectionbottom a:hover {
+    color: #b38b59;          /* Optional: Changes color on hover (custom shade) */
+    /* Optional: Adds underline on hover */
+}
+
+
+/* Lined Paper Effect */
+.text-sectionbottom p {
+    padding-bottom: 10px;
+    border-bottom: 1px solid #ccc;
+    width: 50%; /* Limit the width of the lines to half the page */
+}
+
+
+/* Bottom Right Image as Bookmark */
+.image-sectionbottom img {
+    margin-top: 5vh;
+    width: 14vh;
+    height: 90vh;
+    object-fit: cover;
+    object-position: center;
+    margin-right: 20vh;
+}
+
+
+/* Footer Styles */
+footer {
+    margin-top: 0vh;
+    background-color: #fff;
+    text-align: center;
+    padding: 20px 0;
+}
+
+
+.footer-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+
+.footer-logo img {
+    margin-top: 15px;
+    width: 100px;
+    margin-bottom: 15px;
+}
+
+
+.copyright {
+    font-size: 14px;
+    font-family: 'EB Garamond', serif;
+    color: rgba(0, 0, 0, 0.7);
+} 
