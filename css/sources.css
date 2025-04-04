@@ -1,0 +1,106 @@
+/* Center navigation bar */
+nav {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 50px;
+    padding: 15px 0;
+}
+
+
+/* Style images in navigation bar */
+nav a img {
+    width: 60px;
+    height: auto;
+    transition: transform 0.3s ease-in-out;
+}
+
+
+/* Make the Writers image slightly bigger */
+nav a:first-child img {
+    width: 80px;
+}
+
+
+/* Lower the Poetry image slightly */
+nav a:last-child img {
+    transform: translateY(8px);
+}
+
+
+/* Hover Effect */
+nav a img:hover {
+    transform: scale(1.1);
+}
+
+
+/* General Styles */
+body {
+    margin: 0;
+    padding: 0;
+    background-color: white;
+    font-family: 'Lustria', serif;
+}
+/* Style for the title */
+main > p:first-of-type {
+    font-family: 'Lustria', serif;
+    color: rgba(0, 0, 0, 0.7);
+    text-align: center;
+    font-size: 32px;
+   
+}
+
+/* Center all content */
+main {
+    text-align: center;
+}
+
+/* Style for links */
+a {
+    color: rgba(187, 154, 132, 0.7);
+    text-decoration: none;
+}
+
+/* Optional: Add a hover effect */
+a:hover {
+    color: rgba(187, 154, 132, 1);
+    
+}
+ul {
+    list-style: none; /* Removes bullet points */
+    padding: 0; /* Removes default padding */
+    text-align: center; /* Centers the list */
+}
+
+
+
+
+
+/* Footer Styles */
+footer {
+    margin-top: 0vh;
+    background-color: #fff;
+    text-align: center;
+    padding: 20px 0;
+}
+
+
+.footer-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+
+.footer-logo img {
+    margin-top: 15px;
+    width: 100px;
+    margin-bottom: 15px;
+}
+
+
+.copyright {
+    font-size: 14px;
+    font-family: 'EB Garamond', serif;
+    color: rgba(0, 0, 0, 0.7);
+} 
