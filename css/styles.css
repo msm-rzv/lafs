@@ -142,7 +142,7 @@ body {
 }
 .image-section{
     flex: 1;
-    background:url(./LafsImages/MainPagePoet.jpg) no-repeat center center;
+    background:url(/LafsImages/MainPagePoet.jpg) no-repeat center center;
     background-size: cover;
     background-position:center 20%
 }
