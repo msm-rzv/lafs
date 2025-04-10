@@ -118,3 +118,37 @@ footer {
     color: rgba(0, 0, 0, 0.7); /* Light gray */
 }
 
+@media screen and (max-width: 768px) {
+    /* Adjust writer grid section */
+    #writers-grid {
+        gap: 20px; /* Reduced gap between items */
+        padding: 20px 10px; /* Reduced padding */
+    }
+
+    /* Adjust writer container layout */
+    .writer {
+        flex-direction: column; /* Stack images and text */
+        gap: 20px; /* Reduced gap between image and text */
+        width: 90%; /* Make container slightly narrower */
+    }
+
+    /* Adjust writer image size */
+    .writer-image img {
+        width: 120px;  /* smaller width */
+        height: 180px; /* maintain portrait shape */
+    }
+
+    /* Adjust writer info font sizes */
+    .writer-info a.writer-link {
+        font-size: 18px; /* Smaller font size */
+    }
+
+    .writer-info p {
+        font-size: 14px; /* Smaller font size */
+    }
+
+    /* Optional: Adjust padding/margins for better fit */
+    .writer-info {
+        padding: 10px; /* Reduce padding around text */
+    }
+}

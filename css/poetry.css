@@ -93,3 +93,27 @@ footer {
     color: rgba(0, 0, 0, 0.7); /* Light gray */
 }
 
+@media screen and (max-width: 768px) {
+    nav {
+        gap: 30px;
+    }
+
+    #poetry-categories {
+        flex-wrap: wrap;
+        gap: 20px;
+        padding: 40px 10px;
+    }
+
+    .category img {
+        width: 70px;
+        height: 500px;
+        margin-bottom: 10px;
+    }
+
+    .category span {
+        font-size: 14px;
+    }
+
+   
+   
+}

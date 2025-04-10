@@ -181,3 +181,26 @@ footer {
     font-family: 'EB Garamond', serif;
     color: rgba(0, 0, 0, 0.7);
 } 
+@media screen and (max-width: 768px) {
+    
+    .text-section p {
+        font-size: 11px;
+        line-height: 20px;
+    }
+
+    .image-sectionbottom {
+        
+        width: 120px;  /* smaller width */
+        height: 180px; /* maintain portrait shape */
+    }
+
+    .text-sectionbottom p {
+        font-size: 14px;
+        line-height: 20px;
+    }
+
+    .containerbottom {
+        height: auto; /* Ensure it's flexible and doesn't push footer away */
+        margin-bottom: 150px; /* Smaller margin at the bottom */
+    }
+}

@@ -230,5 +230,67 @@ footer {
     color: rgba(0, 0, 0, 0.7); /* Light gray */
 }
 
+@media screen and (max-width: 768px) {
+
+    /* Shrink carousel image size */
+    .carousel-item img {
+        width: 120px;  /* smaller width */
+        height: 180px; /* maintain portrait shape */
+    }
+
+    /* Reduce spacing between items slightly */
+    .carousel-track {
+        gap: 6px;
+    }
+
+    /* Shrink poet names */
+    .carousel-item p {
+        font-size: 12px;
+        margin-top: 4px;
+    }
+
+    .container {
+        margin-top: 5vh;
+        height:500px;
+    }
+    .containerbottom{
+        height: 500px;
+    }
+
+    
+    .text-section p {
+        font-size: 11px;
+        line-height: 50px;
+    }
+
+    /* Shrink bottom text-section */
+    .text-sectionbottom p {
+        font-size: 11px;
+        line-height: 50px;
+    }
+    .image-section{
+        height: 500px;
+    }
+    .text-section{
+        height: 500px;
+    }
+    .image-sectionbottom{
+        height: 500px;
+    }
+    .text-sectionbottom{
+        height: 500px;
+    }
+    /* Optional: reduce padding/margin around the sections for better fit */
+    .container, .containerbottom {
+        padding: 10px;
+    }
+
+    /* Optional: shrink the icon images below the text */
+    .text-section a img,
+    .text-sectionbottom a img {
+        width: 40px;
+    }
+    
+}
 
 

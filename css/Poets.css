@@ -181,3 +181,27 @@ footer {
     font-family: 'EB Garamond', serif;
     color: rgba(0, 0, 0, 0.7);
 } 
+@media screen and (max-width: 768px) {
+    .container{
+        height: 500px;
+    }
+    .containerbottom{
+        margin-top: 5px;
+        margin-bottom: 5px;
+    }
+    .text-section p {
+        font-size: 11px;
+        line-height: 20px;
+    }
+    .image-sectionbottom{
+        padding-right: 40px;
+        width: 120px;  /* smaller width */
+        height: 180px; /* maintain portrait shape */
+       
+    }
+    .text-sectionbottom p{
+        font-size: 14px;
+        line-height: 20px;
+    }
+
+}
