@@ -245,7 +245,7 @@ footer {
 
     /* Shrink poet names */
     .carousel-item p {
-        font-size: 12px;
+        font-size: 10px;
         margin-top: 4px;
     }
 
@@ -259,26 +259,28 @@ footer {
 
     
     .text-section p {
-        font-size: 11px;
-        line-height: 50px;
+        font-size: 10px;
+        line-height: 20px;
     }
 
     /* Shrink bottom text-section */
     .text-sectionbottom p {
-        font-size: 11px;
-        line-height: 50px;
+        font-size: 10px;
+        line-height: 20px;
     }
     .image-section{
         height: 500px;
     }
     .text-section{
         height: 500px;
+        padding: 20px;
     }
     .image-sectionbottom{
         height: 500px;
     }
     .text-sectionbottom{
         height: 500px;
+        padding: 20px;
     }
     /* Optional: reduce padding/margin around the sections for better fit */
     .container, .containerbottom {

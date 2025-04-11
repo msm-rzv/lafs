@@ -189,8 +189,11 @@ footer {
         margin-top: 5px;
         margin-bottom: 5px;
     }
+    .text-section{
+        padding: 20px;
+    }
     .text-section p {
-        font-size: 11px;
+        font-size: 10px;
         line-height: 20px;
     }
     .image-sectionbottom{
