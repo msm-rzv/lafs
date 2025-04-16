@@ -183,24 +183,43 @@ footer {
 } 
 @media screen and (max-width: 768px) {
     
+    .container{
+        height: 500px;
+    }
+    .containerbottom{
+        margin-top: 5px;
+        margin-bottom: 5px;
+    }
+    .text-section{
+        padding: 20px;
+    }
     .text-section p {
-        font-size: 11px;
+        font-size: 10px;
         line-height: 20px;
     }
-
-    .image-sectionbottom {
-        
+    .image-sectionbottom{
+        padding-right: 10px;
         width: 120px;  /* smaller width */
         height: 180px; /* maintain portrait shape */
+       
     }
-
-    .text-sectionbottom p {
+    .text-sectionbottom p{
         font-size: 14px;
         line-height: 20px;
     }
-
-    .containerbottom {
-        height: auto; /* Ensure it's flexible and doesn't push footer away */
-        margin-bottom: 150px; /* Smaller margin at the bottom */
+    .image-section img {
+        object-position: center center; /* Centered for mobile */
     }
+    .image-sectionbottom img {
+        width: 8vh;
+        height: 94vh;
+        margin-right: 0;
+    }
+    .containerbottom {
+        height: 95vh;
+        margin-top: 30px;
+        margin-bottom: 30px;
+    }
+
+    
 }

@@ -197,7 +197,7 @@ footer {
         line-height: 20px;
     }
     .image-sectionbottom{
-        padding-right: 40px;
+        padding-right: 10px;
         width: 120px;  /* smaller width */
         height: 180px; /* maintain portrait shape */
        
@@ -206,5 +206,14 @@ footer {
         font-size: 14px;
         line-height: 20px;
     }
+    .image-section img {
+        object-position: center center; /* Centered for mobile */
+    }
+    .image-sectionbottom img {
+        width: 8vh;
+        height: 80vh;
+        margin-right: 0;
+    }
+    
 
 }
