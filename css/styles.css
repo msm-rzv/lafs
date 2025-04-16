@@ -109,6 +109,11 @@ body {
     text-decoration: none; /* Ensures links are not underlined */
     color: inherit; /* Keeps text color consistent */
 }
+.carousel-item a:hover p {
+    color: #b38b59; ;
+   
+}
+
 .carousel-container:hover .carousel-track {
     animation-play-state: paused; /* Stops the scrolling when hovered */
 }
