@@ -93,27 +93,60 @@ footer {
     color: rgba(0, 0, 0, 0.7); /* Light gray */
 }
 
+@media (max-width: 1366px) {
+   .category{
+    width: 80px; /* Slightly wider */
+    height: 500px; /* Longer images */
+}
+  
+}
+
 @media screen and (max-width: 768px) {
-    nav {
-        gap: 30px;
-    }
+   
+  nav {
+    gap: 20px;
+    padding: 10px 0;
+    margin-top: 0 !important;
+    padding: 10px 0 !important;
+    position: relative !important;
+    top: 0 !important;
+  }
+  nav a img {
+    width: 40px !important;
+  }
+  nav a:first-child img {
+    width: 50px !important;
+  }
 
-    #poetry-categories {
+    body, header {
+    margin: 0 !important;
+    padding: 0 !important;
+  }
+  
+  #poetry-categories {
+        padding: 20px 10px !important;
         flex-wrap: wrap;
-        gap: 20px;
-        padding: 40px 10px;
+        gap: 25px;
+        
     }
-
-    .category img {
+ .category img {
         width: 50px;
         height: 500px;
         margin-bottom: 10px;
     }
 
-    .category span {
-        font-size: 14px;
+.category span {
+        font-size: 12px;
     }
 
-   
+  /* Footer adjustments */
+  .footer-logo img {
+    width: 70px !important;
+  }
+  .footer-container p {
+    font-size: 12px !important;
+  }
+
+  
    
 }

@@ -121,8 +121,64 @@ footer {
     font-family: 'EB Garamond', serif;
     color: rgba(0, 0, 0, 0.7); /* Light gray */
 }
+@media (max-width: 1366px) {
+    /* Writer Grid Adjustments */
+    #writers-grid {
+        gap: 30px; /* Reduced gap between writers */
+        padding: 30px 15px; /* Tighter padding */
+    }
 
+    .writer {
+        gap: 30px; /* Reduced gap between image and text */
+        width: 90%; /* Slightly narrower container */
+    }
+
+    /* Smaller writer images (150x225 like carousel) */
+    .writer-image img {
+        width: 150px;
+        height: 225px;
+    }
+
+    /* Adjust text sizing */
+    .writer-info a.writer-link {
+        font-size: 20px; /* Slightly smaller than desktop */
+    }
+
+    .writer-info p {
+        font-size: 16px; /* Slightly smaller than desktop */
+    }
+
+    /* Hover effects */
+    .writer-info:hover {
+        transform: scale(1.03); /* More subtle hover effect */
+    }
+
+    /* Footer adjustments */
+    .footer-logo img {
+        width: 80px; /* Slightly smaller logo */
+    }
+}
 @media screen and (max-width: 768px) {
+      nav {
+    gap: 20px;
+    padding: 10px 0;
+  }
+  nav a img {
+    width: 40px !important;
+  }
+  nav a:first-child img {
+    width: 50px !important;
+  }
+
+    /* Footer adjustments */
+  .footer-logo img {
+    width: 70px !important;
+  }
+  .footer-container p {
+    font-size: 12px !important;
+  }
+
+
     /* Adjust writer grid section */
     #writers-grid {
         gap: 20px; /* Reduced gap between items */
@@ -138,21 +194,21 @@ footer {
 
     /* Adjust writer image size */
     .writer-image img {
-        width: 120px;  /* smaller width */
-        height: 180px; /* maintain portrait shape */
+        width: 80px;  /* smaller width */
+        height: 120px; /* maintain portrait shape */
     }
 
     /* Adjust writer info font sizes */
     .writer-info a.writer-link {
-        font-size: 18px; /* Smaller font size */
+        font-size: 12px; /* Smaller font size */
     }
 
     .writer-info p {
-        font-size: 14px; /* Smaller font size */
+        font-size: 8px; /* Smaller font size */
     }
 
     /* Optional: Adjust padding/margins for better fit */
     .writer-info {
-        padding: 10px; /* Reduce padding around text */
+        padding: 5px; /* Reduce padding around text */
     }
 }

@@ -100,3 +100,32 @@ footer {
     font-family: 'EB Garamond', serif;
     color: rgba(0, 0, 0, 0.7);
 } 
+
+@media screen and (max-width: 768px) {
+
+         nav {
+    gap: 20px;
+    padding: 10px 0;
+  }
+  nav a img {
+    width: 40px !important;
+  }
+  nav a:first-child img {
+    width: 50px !important;
+  }
+
+ 
+  .thepoem{
+    font-size: 15px;
+  }
+
+
+       /* Footer adjustments */
+  .footer-logo img {
+    width: 70px !important;
+  }
+  .footer-container p {
+    font-size: 12px !important;
+  }
+
+}

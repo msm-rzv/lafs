@@ -181,7 +181,26 @@ footer {
     font-family: 'EB Garamond', serif;
     color: rgba(0, 0, 0, 0.7);
 } 
+@media (max-width: 1366px) {
+    .text-section, 
+    .text-sectionbottom {
+       font-size:  10px;
+    }
+    
+}
+
+
 @media screen and (max-width: 768px) {
+     nav {
+    gap: 20px;
+    padding: 10px 0;
+  }
+  nav a img {
+    width: 40px !important;
+  }
+  nav a:first-child img {
+    width: 50px !important;
+  }
     
     .container{
         height: 500px;
@@ -204,15 +223,15 @@ footer {
        
     }
     .text-sectionbottom p{
-        font-size: 14px;
-        line-height: 20px;
+        font-size: 10px;
+        line-height: 15px;
     }
     .image-section img {
         object-position: center center; /* Centered for mobile */
     }
     .image-sectionbottom img {
         width: 8vh;
-        height: 94vh;
+        height: 70vh;
         margin-right: 0;
     }
     .containerbottom {
@@ -220,6 +239,13 @@ footer {
         margin-top: 30px;
         margin-bottom: 30px;
     }
+     /* Footer adjustments */
+  .footer-logo img {
+    width: 70px !important;
+  }
+  .footer-container p {
+    font-size: 12px !important;
+  }
 
     
 }
