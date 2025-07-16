@@ -1,4 +1,4 @@
-// universal-search.js - Place this in your js folder
+
 const searchData = {
     writers: [
         {
