@@ -63,7 +63,6 @@
 
 #search-input::placeholder {
     color: #999;
-    font-style: italic;
 }
 
 .search-close-btn {
@@ -116,7 +115,6 @@
 .result-name {
     font-family: 'Lustria', serif;
     font-size: 16px;
-    font-weight: 600;
     color: #333;
     margin-bottom: 4px;
 }
@@ -125,7 +123,6 @@
     font-family: 'EB Garamond', serif;
     font-size: 14px;
     color: #b38b59;
-    font-style: italic;
 }
 
 .no-results {
@@ -133,7 +130,6 @@
     text-align: center;
     color: #999;
     font-family: 'EB Garamond', serif;
-    font-style: italic;
 }
 
 /* Mobile Responsive */
