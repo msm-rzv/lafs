@@ -1,3 +1,4 @@
+// universal-search.js - Place this in your js folder
 const searchData = {
     writers: [
         {
@@ -81,7 +82,7 @@ const searchData = {
         },
         {
             name: "Jawab e Shikwa",
-            url: "Poems/AllamaIqbalPoems/JawabeSshikwa.html",
+            url: "Poems/AllamaIqbalPoems/JawabeShikwa.html",
             category: "Poem",
             author: "Allama Iqbal"
         },
@@ -103,6 +104,38 @@ const searchData = {
             category: "Poem",
             author: "Allama Iqbal"
         },
+        // Faiz Ahmad Faiz Poems
+        {
+            name: "Bol Ke",
+            url: "Poems/FaizAhmadFaizPoems/BolKe.html",
+            category: "Poem",
+            author: "Faiz Ahmad Faiz"
+        },
+        {
+            name: "Gulon Mein",
+            url: "Poems/FaizAhmadFaizPoems/GulonMein.html",
+            category: "Poem",
+            author: "Faiz Ahmad Faiz"
+        },
+        {
+            name: "Hum Dekhenge",
+            url: "Poems/FaizAhmadFaizPoems/HumDekhenge.html",
+            category: "Poem",
+            author: "Faiz Ahmad Faiz"
+        },
+        {
+            name: "Mujh Se Pehli",
+            url: "Poems/FaizAhmadFaizPoems/MujhSePehli.html",
+            category: "Poem",
+            author: "Faiz Ahmad Faiz"
+        },
+        {
+            name: "Nisar Mein",
+            url: "Poems/FaizAhmadFaizPoems/NisarMein.html",
+            category: "Poem",
+            author: "Faiz Ahmad Faiz"
+        },
+        
         // Iftikhar Arif Poems
         {
             name: "Khwab",
@@ -117,20 +150,20 @@ const searchData = {
             author: "Iftikhar Arif"
         },
         {
-            name: "Merekhuda",
+            name: "Mere Khuda",
             url: "Poems/IftikharArifpoems/Merekhuda.html",
             category: "Poem",
             author: "Iftikhar Arif"
         },
         {
-            name: "Nobat",
-            url: "Poems/IftikharArifpoems/Nobat.html",
+            name: "Mohabbat Ki Ek Nazm",
+            url: "Poems/IftikharArifpoems/Mohabbat.html",
             category: "Poem",
             author: "Iftikhar Arif"
         },
         // Jaun Eliya Poems
         {
-            name: "Bekarar Se",
+            name: "Be Karari Se",
             url: "Poems/JaunEliyaPoems/BekarariSe.html",
             category: "Poem",
             author: "Jaun Eliya"
@@ -142,14 +175,14 @@ const searchData = {
             author: "Jaun Eliya"
         },
         {
-            name: "Jinr Guzregi",
-            url: "Poems/JaunEliyaPoems/JinrGuzregi.html",
+            name: "Umr Guzregi",
+            url: "Poems/JaunEliyaPoems/UmrGuzregi.html",
             category: "Poem",
             author: "Jaun Eliya"
         },
         {
-            name: "Zinda Giya Hai",
-            url: "Poems/JaunEliyaPoems/ZindaGiyaHai.html",
+            name: "Zindagi Kya Hai",
+            url: "Poems/JaunEliyaPoems/ZindagiKyaHai.html",
             category: "Poem",
             author: "Jaun Eliya"
         },
@@ -167,14 +200,20 @@ const searchData = {
             author: "Kaifi Azmi"
         },
         {
-            name: "Tuntina",
-            url: "Poems/KafiAzmirPoems/Tuntina.html",
+            name: "Makaan",
+            url: "Poems/KafiAzmirPoems/Makaan.html",
+            category: "Poem",
+            author: "Kaifi Azmi"
+        },
+        {
+            name: "TumItna",
+            url: "Poems/KafiAzmirPoems/TumItna.html",
             category: "Poem",
             author: "Kaifi Azmi"
         },
         // Mirza Ghalib Poems
         {
-            name: "Bazicha",
+            name: "Bazicha-e-Atfal",
             url: "Poems/MirzaGhalibPoems/Bazicha.html",
             category: "Poem",
             author: "Mirza Ghalib"
@@ -186,8 +225,8 @@ const searchData = {
             author: "Mirza Ghalib"
         },
         {
-            name: "Sabr Kahan",
-            url: "Poems/MirzaGhalibPoems/SabrKahan.html",
+            name: "Sab Kahan",
+            url: "Poems/MirzaGhalibPoems/SabKahan.html",
             category: "Poem",
             author: "Mirza Ghalib"
         },
@@ -212,7 +251,7 @@ const searchData = {
         },
         {
             name: "Mohabbat Nahi",
-            url: "Poems/MunirNiaziPoems/MohabbatNahi.html",
+            url: "Poems/MunirNiaziPoems/MohabbatAbNahi.html",
             category: "Poem",
             author: "Munir Niazi"
         },
@@ -237,7 +276,7 @@ const searchData = {
         },
         {
             name: "Lautne ka Ehsas",
-            url: "Poems/ParveenShakirPoems/LautnekaEhsas.html",
+            url: "Poems/ParveenShakirPoems/LautnekaIrada.html",
             category: "Poem",
             author: "Parveen Shakir"
         },
@@ -277,12 +316,43 @@ const searchData = {
     ]
 };
 
-// Combine all search data
-const allSearchData = [
-    ...searchData.writers,
-    ...searchData.poems,
-    ...searchData.genres
-];
+// Function to determine the current page's folder depth
+function getCurrentPagePath() {
+    const currentPath = window.location.pathname;
+    const segments = currentPath.split('/').filter(segment => segment !== '');
+    
+    // Count how many folders deep we are from the root
+    const depth = segments.length - 1; // -1 because the last segment is the file name
+    
+    // Generate the appropriate prefix based on depth
+    let prefix = '';
+    for (let i = 0; i < depth; i++) {
+        prefix += '../';
+    }
+    
+    return prefix;
+}
+
+// Function to adjust URLs based on current page location
+function adjustUrlsForCurrentPage(data) {
+    const prefix = getCurrentPagePath();
+    
+    return data.map(item => ({
+        ...item,
+        url: prefix + item.url
+    }));
+}
+
+// Get adjusted search data for current page
+function getAdjustedSearchData() {
+    const prefix = getCurrentPagePath();
+    
+    return [
+        ...adjustUrlsForCurrentPage(searchData.writers),
+        ...adjustUrlsForCurrentPage(searchData.poems),
+        ...adjustUrlsForCurrentPage(searchData.genres)
+    ];
+}
 
 // Search function
 function searchItems(query) {
@@ -291,6 +361,7 @@ function searchItems(query) {
     }
     
     const searchTerm = query.toLowerCase().trim();
+    const allSearchData = getAdjustedSearchData();
     
     return allSearchData.filter(item => {
         const nameMatch = item.name.toLowerCase().includes(searchTerm);

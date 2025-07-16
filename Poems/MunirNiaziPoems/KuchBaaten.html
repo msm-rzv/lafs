@@ -6,10 +6,25 @@
     <title>Lafs</title>
     <link rel="icon" type="image/x-icon" href="../../LafsImages/logo.png">
     <link rel="stylesheet" type="text/css" href="../../css/Poems.css">
+    <script src="../../js/search.js"></script>
+    <link rel="stylesheet" href="../../css/search.css">
     <link href="https://fonts.googleapis.com/css2?family=Lustria&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=EB+Garamond&display=swap" rel="stylesheet">
 </head>
 <body>
+     <div id="search-container">
+        <button id="search-button" onclick="toggleSearch()">
+            <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M11 19C15.4183 19 19 15.4183 19 11C19 6.58172 15.4183 3 11 3C6.58172 3 3 6.58172 3 11C3 15.4183 6.58172 19 11 19Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                <path d="M21 21L16.65 16.65" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+        </button>
+        <div class="search-input-container">
+            <input type="text" id="search-input" placeholder="Search writers, poems, genres...">
+            <button class="search-close-btn" onclick="toggleSearch()">×</button>
+        </div>
+        <div id="search-results"></div>
+    </div>
     <header>
         <nav>
             <a href="../../writers.html"><img src="../../LafsImages/4.png" alt="Writers"></a>
