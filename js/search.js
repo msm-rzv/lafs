@@ -318,15 +318,18 @@ const searchData = {
 
 // Function to determine the current page's folder depth
 function getCurrentPagePath() {
-    const currentPath = window.location.pathname;
-    const segments = currentPath.split('/').filter(segment => segment !== '');
+    // Simple approach: always use relative paths from root
+    const pathSegments = window.location.pathname.split('/').filter(segment => segment !== '');
     
-    // Count how many folders deep we are from the root
-    const depth = segments.length - 1; // -1 because the last segment is the file name
+    // Remove the last segment (filename)
+    const depth = pathSegments.length - 1;
     
-    // Generate the appropriate prefix based on depth
+    // For GitHub Pages, we might need to account for repository name
+    const isGitHubPages = window.location.hostname.includes('github.io');
+    const actualDepth = isGitHubPages ? Math.max(0, depth - 1) : Math.max(0, depth);
+    
     let prefix = '';
-    for (let i = 0; i < depth; i++) {
+    for (let i = 0; i < actualDepth; i++) {
         prefix += '../';
     }
     
