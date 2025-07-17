@@ -189,25 +189,25 @@ const searchData = {
         // Kaifi Azmi Poems
         {
             name: "Aurat",
-            url: "Poems/KafiAzmiPoems/Aurat.html",
+            url: "Poems/KaifiAzmiPoems/Aurat.html",
             category: "Poem",
             author: "Kaifi Azmi"
         },
         {
             name: "Main Dhundta",
-            url: "Poems/KafiAzmiPoems/MainDhundta.html",
+            url: "Poems/KaifiAzmiPoems/MainDhundta.html",
             category: "Poem",
             author: "Kaifi Azmi"
         },
         {
             name: "Makaan",
-            url: "Poems/KafiAzmiPoems/Makaan.html",
+            url: "Poems/KaifiAzmiPoems/Makaan.html",
             category: "Poem",
             author: "Kaifi Azmi"
         },
         {
             name: "TumItna",
-            url: "Poems/KafiAzmiPoems/TumItna.html",
+            url: "Poems/KaifiAzmiPoems/TumItna.html",
             category: "Poem",
             author: "Kaifi Azmi"
         },
