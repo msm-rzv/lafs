@@ -56,13 +56,22 @@ body {
     position: relative;
 }
 
+.carousel-item:hover img {
+    transform: scale(1.05); /* Subtle scale up on hover */
+    z-index: 100; /* Bring to front */
+    position: relative;
+}
+
+
 /* Ensure images stretch across screen */
 .carousel-track {
+    margin-top: 0.7%;
     display: flex;
     gap: 10px; /* Reduce gap so images are closer together */
     animation: infinite-scroll 20s linear infinite; /* Continuous scrolling */
     width: max-content;
 }
+
 
 /* Image styling */
 .carousel-item {
