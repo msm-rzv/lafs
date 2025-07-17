@@ -69,10 +69,14 @@ nav a img:hover {
     box-shadow: 0 2px 2px rgba(0, 0, 0, 0.2);
 }
 
-.writer-info:hover {
+.writer-info {
+    transition: all 0.3s ease;
+    /* your existing styles */
+}
 
+.writer-info:hover {
     max-width: 400px;
-    color: #b38b59;  /* Lighter color */
+    color: #b38b59;
     transform: scale(1.05);
 }
 
