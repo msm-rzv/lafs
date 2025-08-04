@@ -191,63 +191,158 @@ footer {
         object-position: center 30%; /* Moves focus 30% from top */
     }
     
+@media (max-width: 1366px) {
+    .text-section p, 
+    .text-sectionbottom p {
+        line-height: 1.8;     /* Better spacing for small screens */
+        font-size: 16px;      /* Slightly smaller (adjust if needed) */
+        word-break: break-word; /* Prevent text overflow */
+    }
+
+    /* Optional: Adjust container height if needed */
+    .container, .containerbottom {
+        min-height: 120vh; /* Adds extra vertical space */
+        height: auto;      /* Allows content to expand */
+    }
+     .text-section, .text-sectionbottom {
+        min-height: 50vh; /* Minimum half-screen height */
+        padding: 30px 0;  /* More internal spacing */
+    }
+       .image-section, .image-sectionbottom {
+        min-height: 50vh; /* Ensures images don't get too squished */
+    }
+     #poet-carousel {
+        margin-top: 30px; /* Reduce top margin */
+    }
+    
+    .carousel-item img {
+        width: 150px;  /* Smaller width */
+        height: 225px; /* Maintain 3:2 aspect ratio */
+    }
+    
+    .carousel-item p {
+        font-size: 14px; /* Slightly smaller text */
+    }
+    
+    .carousel-track {
+        gap: 8px; /* Tighter spacing between items */
+    }
+    
+    
 
 }
 @media screen and (max-width: 768px) {
 
-             nav {
-    gap: 20px;
-    padding: 10px 0;
-  }
-  nav a img {
-    width: 40px !important;
-  }
-  nav a:first-child img {
-    width: 50px !important;
-  }
+    nav {
+        gap: 20px;
+        padding: 10px 0;
+    }
+    nav a img {
+        width: 40px !important;
+    }
+    nav a:first-child img {
+        width: 50px !important;
+    }
 
     .container{
         height: 500px;
+        margin-top: 1vh; /* Reduce top margin for mobile */
+    }
+    
+      /* Fix top image section to match text section height exactly */
+    .image-section {
+        width: 50%;
+        height: 300px; /* Same as container height */
+        overflow: hidden;
+        margin: 0 !important;
+        padding: 0 !important;
+    }
+    
+    .image-section img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover; /* This will zoom/crop the image to fill the space */
+        object-position: center center;
+    }
+   
+    
+    /* Text sections - NO margin/padding that affects flex sizing */
+    .text-section {
+        margin: 0 !important;      /* Remove margin that affects flex */
+        padding: 0 !important;     /* Remove padding that affects flex */
+        height: 300px;             /* Same height as image section */
+        width: 50%;                /* Ensure exact half width */
+        
+        /* Add inner padding instead */
+        box-sizing: border-box;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+    
+    .text-sectionbottom {
+        margin: 0 !important;      /* Remove margin that affects flex */
+        padding: 0 !important;     /* Remove padding that affects flex */
+        height: auto !important;   /* Let bottom text be auto height */
+        width: 50%;                /* Ensure exact half width */
+        
+        /* Add inner padding instead */
+        box-sizing: border-box;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+    
+    /* Create inner padding by styling the paragraph and content */
+    .text-section p, .text-sectionbottom p {
+        font-size: 10px;
+        line-height: 1.3 !important; /* Tighter line spacing */
+        margin: 15px !important;      /* Inner spacing - this doesn't affect flex */
+        padding: 0 !important;        /* No padding on paragraphs */
     }
     .containerbottom{
         margin-top: 5px;
         margin-bottom: 5px;
+        height: auto; /* Let it size naturally */
     }
+    
     .text-section{
         padding: 20px;
+        width: 50%; /* Ensure it takes exactly half */
     }
+    
     .text-section p {
         font-size: 10px;
         line-height: 20px;
     }
+    
     .image-sectionbottom{
         padding-right: 10px;
-        width: 120px;  /* smaller width */
-        height: 180px; /* maintain portrait shape */
-       
+        width: 120px;
+        height: 180px;
     }
+    
     .text-sectionbottom p{
         font-size: 10px;
         line-height: 15px;
     }
-    .image-section img {
-        object-position: center center; /* Centered for mobile */
-    }
+    
     .image-sectionbottom img {
         width: 8vh;
         height: 80vh;
         margin-right: 0;
+        margin-bottom: 350px; /* Add 350px margin to prevent footer bleeding */
     }
 
-    
-       /* Footer adjustments */
-  .footer-logo img {
-    width: 70px !important;
-  }
-  .footer-container p {
-    font-size: 12px !important;
+    /* Footer adjustments */
+    .footer-logo img {
+        width: 70px !important;
+    }
+    .footer-container p {
+        font-size: 12px !important;
+    }
+     footer {
+    margin-top: 600px !important; /* Big space between image and footer */
   }
 
-    
-
-}
+}}

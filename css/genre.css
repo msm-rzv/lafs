@@ -207,7 +207,10 @@ footer {
     }
     .containerbottom{
         margin-top: 5px;
-        margin-bottom: 5px;
+        margin-bottom: 50px;
+        height: 70vh; /* Match the image height */
+        display: flex;
+        align-items: stretch; /* Make content stretch to full height */
     }
     .text-section{
         padding: 20px;
@@ -222,6 +225,13 @@ footer {
         height: 180px; /* maintain portrait shape */
        
     }
+    .text-sectionbottom {
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start; /* Align text to top */
+        height: 100%; /* Take full height of container */
+    }
+    
     .text-sectionbottom p{
         font-size: 10px;
         line-height: 15px;
@@ -231,13 +241,9 @@ footer {
     }
     .image-sectionbottom img {
         width: 8vh;
-        height: 70vh;
+        height: 70vh; /* Keep full image height */
         margin-right: 0;
-    }
-    .containerbottom {
-        height: 95vh;
-        margin-top: 30px;
-        margin-bottom: 30px;
+        object-fit: cover; /* Ensure proper image fit */
     }
      /* Footer adjustments */
   .footer-logo img {
@@ -245,6 +251,11 @@ footer {
   }
   .footer-container p {
     font-size: 12px !important;
+  }
+  
+  /* Add long space above footer */
+  footer {
+    margin-top: 450px !important; /* Big space between image and footer */
   }
 
     
