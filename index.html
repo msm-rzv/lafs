@@ -5,221 +5,222 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Lafs</title>
     <link rel="icon" type="image/x-icon" href="LafsImages/logo.png">
-    <script src="js/search.js"></script>
+    <script src="js/search.js" defer></script>
+    <script src="js/carousel.js" defer></script>
     <link rel="stylesheet" href="css/styles.css">
     <link rel="stylesheet" href="css/search.css">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Nastaliq+Urdu&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Nanum+Myeongjo&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Lustria&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=EB+Garamond&display=swap" rel="stylesheet">
 </head>
 <body>
 
+    <!-- Search Container - Now matches other pages -->
     <div id="search-container">
-    <!-- Search Button (Gold magnifying glass) -->
-    <button id="search-button" onclick="toggleSearch()">
-        <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <path d="M11 19C15.4183 19 19 15.4183 19 11C19 6.58172 15.4183 3 11 3C6.58172 3 3 6.58172 3 11C3 15.4183 6.58172 19 11 19Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-            <path d="M21 21L16.65 16.65" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-        </svg>
-    </button>
-    
-    <!-- Search Input Container -->
-    <div class="search-input-container">
-        <input type="text" id="search-input" placeholder="Search writers, poems, genres...">
-        <button class="search-close-btn" onclick="toggleSearch()">×</button>
+        <button id="search-button" onclick="toggleSearch()">
+            <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M11 19C15.4183 19 19 15.4183 19 11C19 6.58172 15.4183 3 11 3C6.58172 3 3 6.58172 3 11C3 15.4183 6.58172 19 11 19Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                <path d="M21 21L16.65 16.65" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+        </button>
+        <div class="search-input-container">
+            <input type="text" id="search-input" placeholder="Search writers, poems, genres...">
+            <button class="search-close-btn" onclick="toggleSearch()">×</button>
+        </div>
+        <div id="search-results"></div>
     </div>
 
-    <!-- Search Results -->
-    <div id="search-results"></div>
-</div>
-
+    <!-- Navigation - Now matches other pages -->
     <header>
         <nav>
             <a href="writers.html"><img src="LafsImages/4.png" alt="Writers"></a>
-            <a href="index.html"><img src="LafsImages/1.png" alt="lafs"></a>
+            <a href="index.html" class="logo-text">ل ف ظ</a>
             <a href="poetry.html"><img src="LafsImages/5.png" alt="Poetry"></a>
         </nav>
     </header>
+
     <main>
+    <!-- Slogan Section -->
+    <section class="slogan-section">
+        <div class="slogan-wrapper">
+            <h1 class="slogan-urdu">اپنی جڑوں سے واپس جڑیں</h1>
+            <p class="slogan-english">Connect back to your roots</p>
+        </div>
+    </section>
+
+        <!-- Poet & Genre Carousel -->
         <section id="poet-carousel">
             <div class="carousel-container">
                 <div class="carousel-track">
-                    <div class="carousel-item">
+                    <!-- Original 18 items -->
+                    <div class="carousel-item poet">
+                        <a href="Writers/Faiz_Ahmad_Faiz.html">
+                            <img src="LafsImages/Makhdoom.jpg" alt="Makhdoom Mohiuddin">
+                            <div class="overlay">
+                                <p>Makhdoom Mohiuddin</p>
+                            </div>
+                        </a>
+                    </div>
+                    
+                    <div class="carousel-item genre">
+                        <a href="poetry/romance.html">
+                            <img src="LafsImages/romance.jpg" alt="Romance">
+                            <div class="overlay">
+                                <p>Romance</p>
+                            </div>
+                        </a>
+                    </div>
 
+                    <div class="carousel-item poet">
                         <a href="Writers/Parveen_Shakir.html">
                             <img src="LafsImages/Parveen Shakir.png" alt="Parveen Shakir">
-                            <p>Parveen Shakir</p>
-                        </a>
-                    </div>
-                    
-                    <div class="carousel-item">
-                        <a href="Writers/Munir_Niazi.html">
-                            <img src="LafsImages/Munir Niazi.jpg" alt="Munir Niazi"> 
-                            <p>Munir Niazi</p>
+                            <div class="overlay">
+                                <p>Parveen Shakir</p>
+                            </div>
                         </a>
                     </div>
 
-                    <div class="carousel-item">
+                    <div class="carousel-item genre">
+                        <a href="poetry/spiritual.html">
+                            <img src="LafsImages/spiritual.png" alt="Spiritual">
+                            <div class="overlay">
+                                <p>Spiritual</p>
+                            </div>
+                        </a>
+                    </div>
+
+                    <div class="carousel-item poet">
+                        <a href="Writers/Munir_Niazi.html">
+                            <img src="LafsImages/Munir Niazi.jpg" alt="Munir Niazi">
+                            <div class="overlay">
+                                <p>Munir Niazi</p>
+                            </div>
+                        </a>
+                    </div>
+
+                    <div class="carousel-item genre">
+                        <a href="poetry/social.html">
+                            <img src="LafsImages/social.jpeg" alt="Social">
+                            <div class="overlay">
+                                <p>Social</p>
+                            </div>
+                        </a>
+                    </div>
+
+                    <div class="carousel-item poet">
                         <a href="Writers/Jaun_Eliya.html">
                             <img src="LafsImages/jaun eliya.jpg" alt="Jaun Aelia">
-                            <p>Jaun Aelia</p>
+                            <div class="overlay">
+                                <p>Jaun Aelia</p>
+                            </div>
                         </a>
                     </div>
 
-                    <div class="carousel-item">
+                    <div class="carousel-item genre">
+                        <a href="poetry/mystical.html">
+                            <img src="LafsImages/mystical.jpeg" alt="Mystical">
+                            <div class="overlay">
+                                <p>Mystical</p>
+                            </div>
+                        </a>
+                    </div>
+
+                    <div class="carousel-item poet">
                         <a href="Writers/IftikharArif.html">
                             <img src="LafsImages/IftikharArif.jpeg" alt="Iftikhar Arif">
-                            <p>Iftikhar Arif</p>
+                            <div class="overlay">
+                                <p>Iftikhar Arif</p>
+                            </div>
                         </a>
                     </div>
 
-                    
-                    <div class="carousel-item">
+                    <div class="carousel-item genre">
+                        <a href="poetry/nature.html">
+                            <img src="LafsImages/nature.jpg" alt="Nature">
+                            <div class="overlay">
+                                <p>Nature</p>
+                            </div>
+                        </a>
+                    </div>
+
+                    <div class="carousel-item poet">
                         <a href="Writers/Allama_Iqbal.html">
                             <img src="LafsImages/Allama Iqbal.jpeg" alt="Allama Iqbal">
-                            <p>Allama Iqbal</p>
+                            <div class="overlay">
+                                <p>Allama Iqbal</p>
+                            </div>
                         </a>
                     </div>
-                    <div class="carousel-item">
-                        <a href="Writers/Faiz_Ahmad_Faiz.html">
-                            <img src="LafsImages/Faiz Ahmed Faiz.jpg" alt="Faiz Ahmad Faiz">
-                            <p>Faiz Ahmad Faiz</p>
+
+                    <div class="carousel-item genre">
+                        <a href="poetry/romance.html">
+                            <img src="LafsImages/romance.jpg" alt="Romance">
+                            <div class="overlay">
+                                <p>Romance</p>
+                            </div>
                         </a>
                     </div>
-                    <div class="carousel-item">
+
+                    <div class="carousel-item poet">
                         <a href="Writers/Ahmad_Faraz.html">
                             <img src="LafsImages/Ahmad Faraz.jpg" alt="Ahmad Faraz">
-                            <p>Ahmad Faraz</p>
+                            <div class="overlay">
+                                <p>Ahmad Faraz</p>
+                            </div>
                         </a>
                     </div>
-                    
-                    <div class="carousel-item">
+
+                    <div class="carousel-item genre">
+                        <a href="poetry/spiritual.html">
+                            <img src="LafsImages/spiritual.png" alt="Spiritual">
+                            <div class="overlay">
+                                <p>Spiritual</p>
+                            </div>
+                        </a>
+                    </div>
+
+                    <div class="carousel-item poet">
                         <a href="Writers/Kaifi_Azmi.html">
                             <img src="LafsImages/Kaifi Azimi.webp" alt="Kaifi Azimi">
-                            <p>Kaifi Azimi</p>
+                            <div class="overlay">
+                                <p>Kaifi Azimi</p>
+                            </div>
                         </a>
                     </div>
 
+                    <div class="carousel-item genre">
+                        <a href="poetry/social.html">
+                            <img src="LafsImages/social.jpeg" alt="Social">
+                            <div class="overlay">
+                                <p>Social</p>
+                            </div>
+                        </a>
+                    </div>
 
-
-                    <div class="carousel-item">
+                    <div class="carousel-item poet">
                         <a href="Writers/Mirza_Ghalib.html">
                             <img src="LafsImages/Mirza Ghalib.jpg" alt="Mirza Ghalib">
-                            <p>Mirza Ghalib</p>
+                            <div class="overlay">
+                                <p>Mirza Ghalib</p>
+                            </div>
+                        </a>
+                    </div>
+
+                    <div class="carousel-item genre">
+                        <a href="poetry/nature.html">
+                            <img src="LafsImages/nature.jpg" alt="Nature">
+                            <div class="overlay">
+                                <p>Nature</p>
+                            </div>
                         </a>
                     </div>
                     
-
-
-                    <!-- Repeat poets to create infinite effect -->
-                    <div class="carousel-item">
-                        <a href="Writers/Parveen_Shakir.html">
-                            <img src="LafsImages/Parveen Shakir.png" alt="Parveen Shakir">
-                            <p>Parveen Shakir</p>
-                        </a>
-                    </div>
-
-                    <div class="carousel-item">
-                        <a href="Writers/Munir_Niazi.html">
-                            <img src="LafsImages/Munir Niazi.jpg" alt="Munir Niazi"> 
-                            <p>Munir Niazi</p>
-                        </a>
-                    </div>
-
-                    <div class="carousel-item">
-                        <a href="Writers/Jaun_Eliya.html">
-                            <img src="LafsImages/jaun eliya.jpg" alt="Jaun Aelia">
-                            <p>Jaun Aelia</p>
-                        </a>
-                    </div>
-
-                    <div class="carousel-item">
-                        <a href="Writers/IftikharArif.html">
-                            <img src="LafsImages/IftikharArif.jpeg" alt="Iftikhar Arif">
-                            <p>Iftikhar Arif</p>
-                        </a>
-                    </div>
-                
-                    <div class="carousel-item">
-                        <a href="Writers/Allama_Iqbal.html">
-                            <img src="LafsImages/Allama Iqbal.jpeg" alt="Allama Iqbal">
-                            <p>Allama Iqbal</p>
-                        </a>
-                    </div>
-                    <div class="carousel-item">
-                        <a href="Writers/Faiz_Ahmad_Faiz.html">
-                            <img src="LafsImages/Faiz Ahmed Faiz.jpg" alt="Faiz Ahmad Faiz">
-                            <p>Faiz Ahmad Faiz</p>
-                        </a>
-                    </div>
-                    <div class="carousel-item">
-                        <a href="Writers/Ahmad_Faraz.html">
-                            <img src="LafsImages/Ahmad Faraz.jpg" alt="Ahmad Faraz">
-                            <p>Ahmad Faraz</p>
-                        </a>
-                    </div>
-                   
-                    <div class="carousel-item">
-                        <a href="Writers/Kaifi_Azmi.html">
-                            <img src="LafsImages/Kaifi Azimi.webp" alt="Kaifi Azimi">
-                            <p>Kaifi Azimi</p>
-                        </a>
-                    </div>
-
-                    
-                    <div class="carousel-item">
-                        <a href="Writers/Mirza_Ghalib.html">
-                            <img src="LafsImages/Mirza Ghalib.jpg" alt="Mirza Ghalib">
-                            <p>Mirza Ghalib</p>
-                        </a>
-                    </div>
-                    
-
+                    <!-- JavaScript will duplicate these items here -->
                 </div>
             </div>
         </section>
 
-
-
-        <div class="container">
-            <div class="image-section">
-            </div>
-            <div class="text-section">
-                <p> 
-                    sunā hai log use aañkh bhar ke dekhte haiñ<br>
-                    so us ke shahr meñ kuchh din Thahar ke dekhte haiñ<br><br>
-
-                    sunā hai rabt hai us ko ḳharāb-hāloñ se<br>
-                    so apne aap ko barbād kar ke dekhte haiñ<br><br>
-
-                    sunā hai dard kī gāhak hai chashm-e-nāz us kī<br>
-                    so ham bhī us kī galī se guzar ke dekhte haiñ<br><br>
-                </p>
-
-                <a href="writers.html"><img src="LafsImages/4.png" alt="Writers"></a>
-            </div>
-        </div>
-        
-        <div class="containerbottom">
-            <div class="text-sectionbottom">
-                <p> Donon jahan teri mohabbat mein haar ke<br>
-                    Vo jaa raha hai koi shab-e-gham guzaar ke<br><br>
-
-                    Veeran hai mai-kada khum-o-saaghar udaas hain<br>
-                    Tum kya gae ki ruuth gae din bahaar ke<br><br>
-
-                    Ik fursat-e-gunaah mili vo bhi chaar din<br>
-                    Dekhe hain hum ne hausle parvardigaar ke<br><br>
-
-                </p>
-
-                <a href="poetry.html"><img src="LafsImages/5.png" alt="Poetry"></a>
-         </div>
-            <div class="image-sectionbottom">
-            </div>
-            
-        </div>
-
-          
         <footer>
             <div class="footer-container">
                 <div class="footer-logo">
@@ -230,4 +231,6 @@
                 </p>
             </div>
         </footer>
-       </main>
+    </main>
+</body>
+</html>

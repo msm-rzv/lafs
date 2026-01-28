@@ -1,37 +1,47 @@
-/* Center navigation bar */
+/* ========== NAVIGATION ========== */
 nav {
     display: flex;
     justify-content: center;
     align-items: center;
-    gap: 50px;
-    padding: 15px 0;
+    padding: 15px 30px;
+    background-color: white;
+    gap: 80px;
+    position: relative;
 }
 
-
-/* Style images in navigation bar */
-nav a img {
-    width: 60px;
+nav a:first-child img {
+    width: 80px;
     height: auto;
     transition: transform 0.3s ease-in-out;
 }
 
-
-/* Make the Writers image slightly bigger */
-nav a:first-child img {
-    width: 80px;
+.logo-text {
+    font-family: 'Noto Nastaliq Urdu', serif;
+    font-size: 40px;
+    color: #000;
+    text-decoration: none;
+    transition: transform 0.3s ease-in-out;
 }
 
-
-/* Lower the Poetry image slightly */
-nav a:last-child img {
-    transform: translateY(8px);
-}
-
-
-/* Hover Effect */
-nav a img:hover {
+.logo-text:hover {
     transform: scale(1.1);
 }
+
+nav a:nth-child(3) img {
+    width: 67px;
+    height: auto;
+    transform: translateY(4px);
+    transition: transform 0.3s ease-in-out;
+}
+
+nav a:first-child img:hover {
+    transform: scale(1.1);
+}
+
+nav a:nth-child(3) img:hover {
+    transform: translateY(8px) scale(1.1);
+}
+
 
 
 /* General Styles */

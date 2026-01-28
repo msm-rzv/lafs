@@ -1,36 +1,53 @@
-/* General Styles */
-body {
-    margin: 0;
-    padding: 0;
-    font-family: 'Lustria', serif;
-    background-color: white;
-}
-
-/* Center navigation bar */
+/* ========== NAVIGATION ========== */
 nav {
     display: flex;
     justify-content: center;
     align-items: center;
-    gap: 50px;
-    padding: 15px 0;
-}
-
-nav a img {
-    width: 60px;
-    height: auto;
-    transition: transform 0.3s ease-in-out;
+    padding: 15px 30px;
+    background-color: white;
+    gap: 80px;
+    position: relative;
 }
 
 nav a:first-child img {
     width: 80px;
+    height: auto;
+    transition: transform 0.3s ease-in-out;
 }
 
-nav a:last-child img {
-    transform: translateY(8px);
+.logo-text {
+    font-family: 'Noto Nastaliq Urdu', serif;
+    font-size: 40px;
+    color: #000;
+    text-decoration: none;
+    transition: transform 0.3s ease-in-out;
 }
 
-nav a img:hover {
+.logo-text:hover {
     transform: scale(1.1);
+}
+
+nav a:nth-child(3) img {
+    width: 67px;
+    height: auto;
+    transform: translateY(4px);
+    transition: transform 0.3s ease-in-out;
+}
+
+nav a:first-child img:hover {
+    transform: scale(1.1);
+}
+
+nav a:nth-child(3) img:hover {
+    transform: translateY(8px) scale(1.1);
+}
+
+/* General Styles */
+body {
+    margin: 0;
+    padding: 0;
+    background-color: white;
+    font-family: 'Lustria', serif;
 }
 
 /* Writers Grid Section */
@@ -61,17 +78,31 @@ nav a img:hover {
     flex-direction: row-reverse; /* Text on left, image on right */
 }
 
+/* UPDATED: Image container with more rounding and better shadow */
+.writer-image {
+    position: relative;
+    overflow: hidden;
+    border-radius: 20px; /* MORE ROUNDED - matches poetry.css */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* UPDATED shadow - matches poetry.css */
+    transition: transform 0.3s ease-in-out;
+}
+
 .writer-image img {
     width: 200px;
     height: 300px;
     object-fit: cover;
-    border-radius: 10px;
-    box-shadow: 0 2px 2px rgba(0, 0, 0, 0.2);
+    border-radius: 20px; /* MORE ROUNDED - matches poetry.css */
+    display: block;
+    transition: transform 0.3s ease-in-out; /* ADDED smooth transition */
+}
+
+/* UPDATED: Hover effect on image - matches poetry.css */
+.writer-image:hover img {
+    transform: scale(1.05); /* CHANGED from nothing to 1.05 scale - matches poetry.css */
 }
 
 .writer-info {
     transition: all 0.3s ease;
-    /* your existing styles */
 }
 
 .writer-info:hover {
@@ -84,17 +115,18 @@ nav a img:hover {
     font-family: 'EB Garamond', serif;
     font-size: 24px;
     color: #555;
-    text-decoration: none; /* Remove underline */
-    display: block; /* Ensure the link takes full width */
-    margin-bottom: 10px; /* Space between name and era */
+    text-decoration: none;
+    display: block;
+    margin-bottom: 10px;
 }
 
 .writer-info p {
     font-family: 'Lustria', serif;
     font-size: 18px;
     color: #555;
-    margin: 0; /* Remove default margin */
+    margin: 0;
 }
+
 .writer-info:hover a.writer-link,
 .writer-info:hover p {
     color: #b38b59;
@@ -102,7 +134,7 @@ nav a img:hover {
 
 /* Footer Styles */
 footer {
-    background-color: #fff; /* White background */
+    background-color: #fff;
     text-align: center;
     padding: 20px 0;
 }
@@ -115,29 +147,29 @@ footer {
 
 .footer-logo img {
     margin-top: 15px;
-    width: 100px; /* Increased logo size */
+    width: 100px;
     margin-bottom: 15px;
 }
-
 
 .copyright {
     font-size: 14px;
     font-family: 'EB Garamond', serif;
-    color: rgba(0, 0, 0, 0.7); /* Light gray */
+    color: rgba(0, 0, 0, 0.7);
 }
+
 @media (max-width: 1366px) {
     /* Writer Grid Adjustments */
     #writers-grid {
-        gap: 30px; /* Reduced gap between writers */
-        padding: 30px 15px; /* Tighter padding */
+        gap: 30px;
+        padding: 30px 15px;
     }
 
     .writer {
-        gap: 30px; /* Reduced gap between image and text */
-        width: 90%; /* Slightly narrower container */
+        gap: 30px;
+        width: 90%;
     }
 
-    /* Smaller writer images (150x225 like carousel) */
+    /* Smaller writer images */
     .writer-image img {
         width: 150px;
         height: 225px;
@@ -145,74 +177,115 @@ footer {
 
     /* Adjust text sizing */
     .writer-info a.writer-link {
-        font-size: 20px; /* Slightly smaller than desktop */
+        font-size: 20px;
     }
 
     .writer-info p {
-        font-size: 16px; /* Slightly smaller than desktop */
+        font-size: 16px;
     }
 
     /* Hover effects */
     .writer-info:hover {
-        transform: scale(1.03); /* More subtle hover effect */
+        transform: scale(1.03);
     }
 
     /* Footer adjustments */
     .footer-logo img {
-        width: 80px; /* Slightly smaller logo */
+        width: 80px;
     }
 }
+
 @media screen and (max-width: 768px) {
-      nav {
-    gap: 20px;
-    padding: 10px 0;
-  }
-  nav a img {
-    width: 40px !important;
-  }
-  nav a:first-child img {
-    width: 50px !important;
-  }
+    body {
+        display: flex;
+        flex-direction: column;
+        min-height: 100vh;
+    }
+
+    main {
+        flex: 1;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+    }
+
+    /* Navigation */
+    nav {
+        gap: 20px;
+        padding: 10px 15px;
+    }
+
+    nav a:first-child img {
+        width: 50px !important;
+    }
+
+    .logo-text {
+        font-size: 28px;
+    }
+
+    nav a:nth-child(3) img {
+        width: 40px !important;
+        transform: translateY(5px);
+    }
+
+    nav a:nth-child(3) img:hover {
+        transform: translateY(5px) scale(1.1);
+    }
 
     /* Footer adjustments */
-  .footer-logo img {
-    width: 70px !important;
-  }
-  .footer-container p {
-    font-size: 12px !important;
-  }
-
+    .footer-logo img {
+        width: 70px !important;
+    }
+    
+    .footer-container p {
+        font-size: 12px !important;
+    }
 
     /* Adjust writer grid section */
     #writers-grid {
-        gap: 20px; /* Reduced gap between items */
-        padding: 20px 10px; /* Reduced padding */
+        gap: 20px;
+        padding: 20px 10px;
     }
 
     /* Adjust writer container layout */
     .writer {
-        flex-direction: column; /* Stack images and text */
-        gap: 20px; /* Reduced gap between image and text */
-        width: 90%; /* Make container slightly narrower */
+        flex-direction: column;
+        gap: 20px;
+        width: 90%;
     }
 
-    /* Adjust writer image size */
+    /* UPDATED: Mobile image styling with rounding */
+    .writer-image {
+        border-radius: 12px; /* Rounded for mobile */
+    }
+
     .writer-image img {
-        width: 80px;  /* smaller width */
-        height: 120px; /* maintain portrait shape */
+        width: 80px;
+        height: 120px;
+        border-radius: 12px; /* Rounded for mobile */
+    }
+
+    /* Disable hover scale on mobile */
+    .writer-image:hover img {
+        transform: none;
     }
 
     /* Adjust writer info font sizes */
     .writer-info a.writer-link {
-        font-size: 12px; /* Smaller font size */
+        font-size: 12px;
     }
 
     .writer-info p {
-        font-size: 8px; /* Smaller font size */
+        font-size: 8px;
     }
 
     /* Optional: Adjust padding/margins for better fit */
     .writer-info {
-        padding: 5px; /* Reduce padding around text */
+        padding: 5px;
+    }
+    
+    footer {
+        padding: 30px 0 15px;
+        margin-top: 0;
     }
 }
