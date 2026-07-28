@@ -7,6 +7,10 @@ nav {
     background-color: white;
     gap: 80px;
     position: relative;
+
+    opacity: 0;
+    animation: fadeInDown 0.8s ease forwards;
+    animation-delay: 0s;
 }
 
 nav a:first-child img {
@@ -23,9 +27,7 @@ nav a:first-child img {
     transition: transform 0.3s ease-in-out;
 }
 
-.logo-text:hover {
-    transform: scale(1.1);
-}
+.logo-text:hover { transform: scale(1.1); }
 
 nav a:nth-child(3) img {
     width: 67px;
@@ -34,9 +36,7 @@ nav a:nth-child(3) img {
     transition: transform 0.3s ease-in-out;
 }
 
-nav a:first-child img:hover {
-    transform: scale(1.1);
-}
+nav a:first-child img:hover { transform: scale(1.1); }
 
 nav a:nth-child(3) img:hover {
     transform: translateY(8px) scale(1.1);
@@ -50,7 +50,30 @@ body {
     font-family: 'Lustria', serif;
 }
 
-/* Writers Grid Section */
+/* ========== ANIMATION KEYFRAMES ========== */
+@keyframes fadeInDown {
+    from { opacity: 0; transform: translateY(-20px); }
+    to   { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes fadeInUp {
+    from { opacity: 0; transform: translateY(30px); }
+    to   { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to   { opacity: 1; }
+}
+
+/* ========== SEARCH ========== */
+#search-container {
+    opacity: 0;
+    animation: fadeIn 0.8s ease forwards;
+    animation-delay: 0.2s;
+}
+
+/* ========== WRITERS GRID ========== */
 #writers-grid {
     display: flex;
     flex-direction: column;
@@ -59,6 +82,7 @@ body {
     padding: 40px 20px;
 }
 
+/* Each writer card fades up with staggered delay */
 .writer {
     display: flex;
     align-items: center;
@@ -67,23 +91,32 @@ body {
     width: 80%;
     max-width: 1200px;
     margin: 0 auto;
+
+    opacity: 0;
+    animation: fadeInUp 0.7s ease forwards;
 }
 
-/* Alternating layout for writers */
-.writer:nth-child(odd) {
-    flex-direction: row; /* Image on left, text on right */
-}
+/* Stagger each writer card */
+.writer:nth-child(1)  { animation-delay: 0.3s; }
+.writer:nth-child(2)  { animation-delay: 0.45s; }
+.writer:nth-child(3)  { animation-delay: 0.6s; }
+.writer:nth-child(4)  { animation-delay: 0.75s; }
+.writer:nth-child(5)  { animation-delay: 0.9s; }
+.writer:nth-child(6)  { animation-delay: 1.05s; }
+.writer:nth-child(7)  { animation-delay: 1.2s; }
+.writer:nth-child(8)  { animation-delay: 1.35s; }
+.writer:nth-child(9)  { animation-delay: 1.5s; }
 
-.writer:nth-child(even) {
-    flex-direction: row-reverse; /* Text on left, image on right */
-}
+/* Alternating layout */
+.writer:nth-child(odd)  { flex-direction: row; }
+.writer:nth-child(even) { flex-direction: row-reverse; }
 
-/* UPDATED: Image container with more rounding and better shadow */
+/* Image */
 .writer-image {
     position: relative;
     overflow: hidden;
-    border-radius: 20px; /* MORE ROUNDED - matches poetry.css */
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* UPDATED shadow - matches poetry.css */
+    border-radius: 20px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
     transition: transform 0.3s ease-in-out;
 }
 
@@ -91,19 +124,15 @@ body {
     width: 200px;
     height: 300px;
     object-fit: cover;
-    border-radius: 20px; /* MORE ROUNDED - matches poetry.css */
+    border-radius: 20px;
     display: block;
-    transition: transform 0.3s ease-in-out; /* ADDED smooth transition */
+    transition: transform 0.3s ease-in-out;
 }
 
-/* UPDATED: Hover effect on image - matches poetry.css */
-.writer-image:hover img {
-    transform: scale(1.05); /* CHANGED from nothing to 1.05 scale - matches poetry.css */
-}
+.writer-image:hover img { transform: scale(1.05); }
 
-.writer-info {
-    transition: all 0.3s ease;
-}
+/* Info */
+.writer-info { transition: all 0.3s ease; }
 
 .writer-info:hover {
     max-width: 400px;
@@ -128,15 +157,17 @@ body {
 }
 
 .writer-info:hover a.writer-link,
-.writer-info:hover p {
-    color: #b38b59;
-}
+.writer-info:hover p { color: #b38b59; }
 
-/* Footer Styles */
+/* ========== FOOTER ========== */
 footer {
     background-color: #fff;
     text-align: center;
     padding: 20px 0;
+
+    opacity: 0;
+    animation: fadeIn 0.8s ease forwards;
+    animation-delay: 1.7s;
 }
 
 .footer-container {
@@ -157,135 +188,49 @@ footer {
     color: rgba(0, 0, 0, 0.7);
 }
 
+/* ========== TABLET ========== */
 @media (max-width: 1366px) {
-    /* Writer Grid Adjustments */
-    #writers-grid {
-        gap: 30px;
-        padding: 30px 15px;
-    }
-
-    .writer {
-        gap: 30px;
-        width: 90%;
-    }
-
-    /* Smaller writer images */
-    .writer-image img {
-        width: 150px;
-        height: 225px;
-    }
-
-    /* Adjust text sizing */
-    .writer-info a.writer-link {
-        font-size: 20px;
-    }
-
-    .writer-info p {
-        font-size: 16px;
-    }
-
-    /* Hover effects */
-    .writer-info:hover {
-        transform: scale(1.03);
-    }
-
-    /* Footer adjustments */
-    .footer-logo img {
-        width: 80px;
-    }
+    #writers-grid { gap: 30px; padding: 30px 15px; }
+    .writer { gap: 30px; width: 90%; }
+    .writer-image img { width: 150px; height: 225px; }
+    .writer-info a.writer-link { font-size: 20px; }
+    .writer-info p { font-size: 16px; }
+    .writer-info:hover { transform: scale(1.03); }
+    .footer-logo img { width: 80px; }
 }
 
+/* ========== MOBILE ========== */
 @media screen and (max-width: 768px) {
-    body {
-        display: flex;
-        flex-direction: column;
-        min-height: 100vh;
-    }
+    body { display: flex; flex-direction: column; min-height: 100vh; }
+    main { flex: 1; display: flex; flex-direction: column; justify-content: space-evenly; }
 
-    main {
-        flex: 1;
-        display: flex;
-        flex-direction: column;
-        justify-content: space-evenly;
-    }
+    nav { gap: 20px; padding: 10px 15px; }
+    nav a:first-child img { width: 50px !important; }
+    .logo-text { font-size: 28px; }
+    nav a:nth-child(3) img { width: 40px !important; transform: translateY(5px); }
+    nav a:nth-child(3) img:hover { transform: translateY(5px) scale(1.1); }
 
-    /* Navigation */
-    nav {
-        gap: 20px;
-        padding: 10px 15px;
-    }
+    .footer-logo img { width: 70px !important; }
+    .footer-container p { font-size: 12px !important; }
 
-    nav a:first-child img {
-        width: 50px !important;
-    }
+    #writers-grid { gap: 20px; padding: 20px 10px; }
 
-    .logo-text {
-        font-size: 28px;
-    }
+    .writer { flex-direction: column; gap: 20px; width: 90%; }
+    .writer-image { border-radius: 12px; }
+    .writer-image img { width: 80px; height: 120px; border-radius: 12px; }
+    .writer-image:hover img { transform: none; }
 
-    nav a:nth-child(3) img {
-        width: 40px !important;
-        transform: translateY(5px);
-    }
+    .writer-info a.writer-link { font-size: 12px; }
+    .writer-info p { font-size: 8px; }
+    .writer-info { padding: 5px; }
 
-    nav a:nth-child(3) img:hover {
-        transform: translateY(5px) scale(1.1);
-    }
+    footer { padding: 30px 0 15px; margin-top: 0; }
+}
 
-    /* Footer adjustments */
-    .footer-logo img {
-        width: 70px !important;
-    }
-    
-    .footer-container p {
-        font-size: 12px !important;
-    }
-
-    /* Adjust writer grid section */
-    #writers-grid {
-        gap: 20px;
-        padding: 20px 10px;
-    }
-
-    /* Adjust writer container layout */
-    .writer {
-        flex-direction: column;
-        gap: 20px;
-        width: 90%;
-    }
-
-    /* UPDATED: Mobile image styling with rounding */
-    .writer-image {
-        border-radius: 12px; /* Rounded for mobile */
-    }
-
-    .writer-image img {
-        width: 80px;
-        height: 120px;
-        border-radius: 12px; /* Rounded for mobile */
-    }
-
-    /* Disable hover scale on mobile */
-    .writer-image:hover img {
-        transform: none;
-    }
-
-    /* Adjust writer info font sizes */
-    .writer-info a.writer-link {
-        font-size: 12px;
-    }
-
-    .writer-info p {
-        font-size: 8px;
-    }
-
-    /* Optional: Adjust padding/margins for better fit */
-    .writer-info {
-        padding: 5px;
-    }
-    
-    footer {
-        padding: 30px 0 15px;
-        margin-top: 0;
+/* ========== REDUCED MOTION ========== */
+@media (prefers-reduced-motion: reduce) {
+    nav, #search-container, .writer, footer {
+        opacity: 1;
+        animation: none;
     }
 }
